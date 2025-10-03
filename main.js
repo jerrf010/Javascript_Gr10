@@ -1,7 +1,18 @@
-let num1 = 6;
-let num2 = 7;
+const readline = require('node:readline');
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
 
-console.log("The sum is: " + (num1 + num2));
-console.log("The product is: " + (num1 * num2));
-console.log("The difference is: " + (num1 - num2));
-console.log("The quotient is: " + (num1 / num2));
+console.log("Welcome Drake");
+console.log("Please enter the age of the person: ");
+
+rl.question('What is your age? ', (age) => {
+
+    if (age < 18) {
+        console.log("You are a child");
+    } else {
+        console.log("You are an adult");
+    }
+    rl.close();
+});
