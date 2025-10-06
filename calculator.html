@@ -9,8 +9,8 @@
         <h1>This is a Calculator</h1>
         <p><b>The answer is: </b> <span id="result"></span></p>
         <script>
-            let num1 = parseFloat(prompt("Enter the first number:"));
-            let num2 = parseFloat(prompt("Enter the second number:"));
+            let num1 = Number(prompt("Enter a value:"));
+            let num2 = Number(prompt("Enter a second value:"));
             let sum = num1 + num2;
             document.getElementById("result").textContent = sum;
         </script>
