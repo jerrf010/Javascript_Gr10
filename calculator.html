@@ -11,8 +11,25 @@
         <script>
             let num1 = Number(prompt("Enter a value:"));
             let num2 = Number(prompt("Enter a second value:"));
-            let sum = num1 + num2;
-            document.getElementById("result").textContent = sum;
+            let operator = prompt("Enter an operator (+, -, *, /):");
+            let result;
+            switch (operator) {
+                case "+":
+                    result = num1 + num2;
+                    break;
+                case "-":
+                    result = num1 - num2;
+                    break;
+                case "*":
+                    result = num1 * num2;
+                    break;
+                case "/":
+                    result = num1 / num2;
+                    break;
+                default:
+                    result = "Invalid operator";
+            }
+            document.getElementById("result").textContent = result;
         </script>
     </body>
 </html>
